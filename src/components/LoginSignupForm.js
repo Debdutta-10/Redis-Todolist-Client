@@ -17,7 +17,7 @@ const LoginSignupForm = () => {
     // Function to handle login
     function handleLogin(e) {
         e.preventDefault();
-        const url = "http://localhost:8000/api/login";
+        const url = "https://redis-todolist-backend.onrender.com/api/login";
         const data = {
             username: username,
             password: password,
@@ -58,7 +58,7 @@ const LoginSignupForm = () => {
 
     function handleSignUp(e) {
         e.preventDefault();
-        const url = "http://localhost:8000/api/signup";
+        const url = "https://redis-todolist-backend.onrender.com/api/signup";
         const data = {
             username: username,
             password: password,

@@ -14,7 +14,7 @@ const Dashboard = () => {
 
   async function getAllTasks() {
     const token = localStorage.getItem('token');
-    const url = "http://localhost:8000/api/getTodos";
+    const url = "https://redis-todolist-backend.onrender.com/api/getTodos";
 
     try {
       const response = await axios.get(url, {
@@ -35,7 +35,7 @@ const Dashboard = () => {
   }, []);
 
   async function handleAddTask() {
-    const url = "http://localhost:8000/api/addTodo";
+    const url = "https://redis-todolist-backend.onrender.com/api/addTodo";
     const token = localStorage.getItem('token');
     const data = {
       title,
@@ -64,7 +64,7 @@ const Dashboard = () => {
   }
 
   async function handleDeleteTask(id) {
-    const url = `http://localhost:8000/api/deletetodo/${id}`;
+    const url = `https://redis-todolist-backend.onrender.com/api/deletetodo/${id}`;
     const token = localStorage.getItem("token");
 
     try {
@@ -95,7 +95,7 @@ const Dashboard = () => {
 
   // New logic to update the completed status
   async function handleMarkCompleted(id, completed) {
-    const url = `http://localhost:8000/api/setCompleted/${id}`;
+    const url = `https://redis-todolist-backend.onrender.com/api/setCompleted/${id}`;
     const token = localStorage.getItem("token");
 
     try {
